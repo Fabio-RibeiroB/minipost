@@ -34,7 +34,7 @@ router.get('/', async(req, res)=>{
         const getPosts = await Post.find() // Post is the name of the model, and we want to find the posts
         res.send(getPosts) // send back to user
     }catch(err){
-
+        
     }
 })
 
@@ -65,7 +65,7 @@ router.patch('/:postId', async(req, res) =>{
             })
         res.send(updatePostById) 
     }catch(err){
-        res.send({message:err })
+        res.send({message:err})
     }
 })
 
